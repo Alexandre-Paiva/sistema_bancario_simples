@@ -28,22 +28,29 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         print("Operação falhou! Você não tem saldo suficiente.")
 
     elif excedeu_limite:
-         print("Operação falhou! O valor do saque excede o limite.")
+        print("Operação falhou! O valor do saque excede o limite.")
 
     elif excedeu_saques:
-         print("Operação falhou! Número máximo de saques excedido.")
+        print("Operação falhou! Número máximo de saques excedido.")
 
     elif valor > 0:
         saldo -= valor
         extrato += f" Saque: R$ {valor:.2f} \n"  
         numero_saques += 1
         print("=== Saque realizado com sucesso !! ===")
+    
     else:
-         print("Operação falhou! Valor inválido!")
+        print("Operação falhou! Valor inválido!")
 
     return saldo, extrato
 
+def criar_cliente():
+     
+     
+     return cliente
 
+def criar_conta():
+     return conta 
 
 def exibir_extrato(saldo, /, *, extrato):
      print("\n================= EXTRATO ================")
@@ -77,7 +84,7 @@ def main():
                 extrato=extrato, 
                 limite=limite, 
                 numero_saques=numero_saques,
-                limite_saques=LIMITE_SAQUES
+                limite_saques=LIMITE_SAQUES,
                 )
             
         elif opcao == "e":
